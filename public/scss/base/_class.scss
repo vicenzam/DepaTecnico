@@ -1,0 +1,70 @@
+.leer-mas{
+	display: inline-block;
+	padding: 10px 15px;
+	background-color: color(segundo);
+	color: white;
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 14px;
+
+	&:hover{
+		background: darken(color(segundo), 8);
+		color: white;
+	}
+
+	&__border{
+		display: inline-block;
+		padding: 10px 15px;
+		color: color(segundo);
+		border: 1px solid color(segundo);
+		cursor: pointer;
+		border-radius: 5px;
+		
+		&:hover{
+			background: color(segundo);
+			color: white;
+		}
+	}
+}
+
+.btnacciones{	
+	display: flex;
+
+	&__item{
+		margin-right: 5px;
+	}
+}
+
+.dominio_activo, .dominio_inactivo{
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin: auto;
+	text-align: center;	
+	border-radius: 50%;
+}
+
+.dominio_activo{
+	background: green;
+}
+
+.dominio_inactivo{
+	background: tomato;
+}
+
+
+.dominio_caduca{
+	background: tomato;
+    color: white;
+    padding: 5px;
+
+    &_mes{
+    	background: red;
+    	color: white;
+    	padding: 5px;
+    }
+}
+
+.iconotabla{
+	cursor: pointer;
+}

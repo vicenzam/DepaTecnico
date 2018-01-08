@@ -1,0 +1,209 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+}
+
+.leer-mas {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #1F9DD9;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.leer-mas:hover {
+  background: #1a83b5;
+  color: white;
+}
+
+.leer-mas__border {
+  display: inline-block;
+  padding: 10px 15px;
+  color: #1F9DD9;
+  border: 1px solid #1F9DD9;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.leer-mas__border:hover {
+  background: #1F9DD9;
+  color: white;
+}
+
+.btnacciones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btnacciones__item {
+  margin-right: 5px;
+}
+
+.dominio_activo, .dominio_inactivo {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.dominio_activo {
+  background: green;
+}
+
+.dominio_inactivo {
+  background: tomato;
+}
+
+.dominio_caduca {
+  background: tomato;
+  color: white;
+  padding: 5px;
+}
+
+.dominio_caduca_mes {
+  background: red;
+  color: white;
+  padding: 5px;
+}
+
+.iconotabla {
+  cursor: pointer;
+}
+
+.header {
+  height: 60px;
+  background: #727272;
+}
+
+.container, .row {
+  height: 100%;
+}
+
+.header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.enlace__logo {
+  display: inline-block;
+}
+
+.enlace__logo .logo {
+  height: 60px;
+  /*la altura debe de ser la misma que el header*/
+}
+
+span.icono-menu {
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  background: blue;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 5px;
+  margin-left: auto;
+  /*sirve para tirarlo a la derecha en mozilla*/
+  cursor: pointer;
+  margin-top: 10px;
+  /*para centrarlo de acuerdo al tamaño de este boton y al tamaño de alto del header*/
+}
+
+.nav {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  left: -100%;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  padding-right: 0;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu__link {
+  display: block;
+  padding: 15px;
+  background: #FBA919;
+  text-decoration: none;
+  color: white;
+}
+
+.menu__link:hover {
+  background: white;
+  color: #FBA919;
+}
+
+.mostrarmenu {
+  left: 0;
+}
+
+@media (min-width: 992px) {
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 5px;
+    /*para centrar el menu de forma vertical teniendo en cuenta el alto del header*/
+  }
+  .nav {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+  .menu__link {
+    background: none;
+  }
+}
+
+.encabezado {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.pagination li {
+  width: 20px;
+  background: #273477;
+  margin-right: 5px;
+  text-align: center;
+}
+
+.pagination li a {
+  color: white;
+}
+
+.pagination li.active {
+  background: #1F9DD9;
+}
+
+.pagination li.active span {
+  color: white;
+}

@@ -1,0 +1,87 @@
+
+.header{
+	height: 60px;
+	background: #727272;
+}
+
+.container, .row{
+	height: 100%;
+}
+
+.header__content{
+	display: flex;
+}
+
+.enlace__logo{
+	display: inline-block;
+}
+
+.enlace__logo .logo{
+	height: 60px; /*la altura debe de ser la misma que el header*/
+}
+
+span.icono-menu{
+	display: block;
+	width: 40px;
+	height: 40px;
+	font-size: 30px;
+	background: blue;
+	color: white;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 5px;
+	margin-left: auto; /*sirve para tirarlo a la derecha en mozilla*/
+	cursor: pointer;
+	margin-top: 10px; /*para centrarlo de acuerdo al tamaño de este boton y al tamaño de alto del header*/
+}
+
+.nav{
+	position: absolute;
+	top: 60px;
+	left: 0;	
+	width: 100%;
+	left: -100%;
+	transition: all 0.4s;
+	padding-right: 0;
+}
+
+.menu{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menu__link{
+	display: block;
+	padding: 15px;
+	background: #FBA919;
+	text-decoration: none;
+	color: white;
+}
+
+.menu__link:hover{
+	background: white;
+	color: #FBA919;
+}
+
+.mostrarmenu{
+	left: 0;
+}
+
+@media(min-width:992px) {
+	.menu{
+		display: flex;
+		padding-top: 5px; /*para centrar el menu de forma vertical teniendo en cuenta el alto del header*/
+	}
+
+	.nav{
+		position: static;
+		display: flex;
+		justify-content: flex-end;
+		
+	}
+
+	.menu__link{
+		background: none;
+	}
+}

@@ -1,0 +1,21 @@
+.pagination{
+	
+	li{
+		width: 20px;
+		background: color(primario);
+		margin-right: 5px;
+		text-align: center;
+		a{
+			color: white;
+		}
+	}
+
+	li.active{
+		background: color(segundo);
+		span{
+			color: white;
+		}
+	}
+
+
+}
