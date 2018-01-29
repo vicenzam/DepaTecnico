@@ -23,7 +23,6 @@ class CreateReceptionsTable extends Migration
             $table->text('problema');
             $table->text('equipo')->nullable();
             $table->text('observacion')->nullable();
-
             $table->enum('estado',['INGRESADO', 'REVISION', 'ENTREGADO'])->dafault('INGRESADO');
 
             $table->timestamps();
