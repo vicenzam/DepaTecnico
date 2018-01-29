@@ -14,10 +14,11 @@ class CreateReceptionsTable extends Migration
     public function up()
     {
         Schema::create('receptions', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('client_id')->unsigned();
+            $table->increments('id');            
             $table->integer('technical_id')->unsigned();
 
+            $table->string('nombre_cliente', 128);
+            $table->string('telefono', 128);
             $table->date('fecharecepcion');
             $table->text('problema');
             $table->text('equipo')->nullable();
@@ -27,8 +28,7 @@ class CreateReceptionsTable extends Migration
 
             $table->timestamps();
 
-            //Relaciones
-            $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
+            //Relaciones            
             $table->foreign('technical_id')->references('id')->on('technicals')->onDelete('cascade');
         });
     }

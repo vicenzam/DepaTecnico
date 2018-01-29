@@ -11,6 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
+Route::redirect('/', 'recepcion');
+
+Route::get('/clientes', function(){
+	return view('clients.index');
 });
+
+/*Route::get('/recepcion', function(){
+	return view('receptions.index');
+});*/
+
+Route::get('/tecnicos', function(){
+	return view('technicals.index');
+});
+
+Route::resource('clients', 'ClientController', ['except' => 'create', 'edit']);
+Route::resource('technicals', 'TechnicalController', ['except' => 'create', 'edit']);
+Route::resource('recepcion', 'ReceptionController');

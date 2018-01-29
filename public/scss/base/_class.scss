@@ -67,4 +67,26 @@
 
 .iconotabla{
 	cursor: pointer;
+	font-size: 13px;
+}
+
+td.alt { 
+	background-color: #ffc; 
+	background-color: rgba(255, 255, 0, 0.2); 
+}
+
+td p{
+	margin-bottom: 0;
+}
+
+.relleno{
+	height: 800px;
+}
+
+.estado{
+	color: color(cuarto);
+}
+
+#imprimir{
+	cursor: pointer;
 }
