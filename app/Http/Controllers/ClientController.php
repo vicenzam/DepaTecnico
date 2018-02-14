@@ -38,9 +38,7 @@ class ClientController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'nombre'   => 'required',
-            'apellido' => 'required',
-            'cedula'   => 'required',
+            'nombre'   => 'required',            
             'telefono' => 'required'          
         ]);
 
@@ -72,9 +70,7 @@ class ClientController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'nombre'   => 'required',
-            'apellido' => 'required',
-            'cedula'   => 'required',
+            'nombre'   => 'required',            
             'telefono' => 'required'          
         ]);
 

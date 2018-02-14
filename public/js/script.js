@@ -118,7 +118,7 @@ new Vue({
 			var url = 'clients';
 			axios.post(url, {
 				nombre: this.newClient.nombre,
-				nombre: this.newClient.apellido,
+				apellido: this.newClient.apellido,
 				cedula: this.newClient.cedula,
 				telefono: this.newClient.telefono,
 				email: this.newClient.email
