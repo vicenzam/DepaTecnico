@@ -10,6 +10,11 @@ $(document).ready(function() {
     tinymce.init({ selector:'textarea' });
 });
 
+/*$('.selectpicker').selectpicker({
+  style: 'btn-default'  
+});*/
+
+
 new Vue({
 	el: '#crud',
 	created: function(){
@@ -269,3 +274,9 @@ new Vue({
 		},
 	}
 });*/
+
+var mySelect = new Select('#client_id',{
+	filtered: 'auto',
+	filter_placeholder: 'Seleccionar opciones...',
+	filter_threshold: 8
+});

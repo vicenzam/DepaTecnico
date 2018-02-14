@@ -25,8 +25,7 @@ class ReceptionRequest extends FormRequest
     {
         return [
             'technical_id'   => 'required',
-            'nombre_cliente' => 'required',
-            'telefono'       => 'required',
+            'client_id'      => 'required',            
             'fecharecepcion' => 'required',
             'problema'       => 'required',
             'estado'         => 'required',

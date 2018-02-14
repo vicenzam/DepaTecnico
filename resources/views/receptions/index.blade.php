@@ -46,7 +46,7 @@
 				@foreach($receptions as $reception)    			
 			    <tr>
 			    	<td>{{ $reception->id }}</td>
-			    	<td>{{ $reception->nombre_cliente }}</td>			    	
+			    	<td>{{ $reception->client->nombre }}</td>			    	
 			    	<td>{{ $reception->fecharecepcion->format('d-m-Y') }}</td>			    	
 			    	<td>{!! $reception->problema !!}</td>			    	
 			    	<td>{{ $reception->estado }}</td>			    	
@@ -76,9 +76,4 @@
 		</div>
 
 
-@endsection
-
-
-@section('scripts')
-	<script src="{{ asset('js/jquery.filtertable.min.js') }}"></script>
 @endsection

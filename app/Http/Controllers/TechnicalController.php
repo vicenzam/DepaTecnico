@@ -16,7 +16,7 @@ class TechnicalController extends Controller
     {
         /*$technicals = Technical::get();      
         return $technicals;*/
-        $technicals = Technical::orderBy('id', 'ASC')->paginate(3);      
+        $technicals = Technical::orderBy('id', 'ASC')->paginate(8);      
         return [
             'pagination' => [
                 'total'        => $technicals->total(),

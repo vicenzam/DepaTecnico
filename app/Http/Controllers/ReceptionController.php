@@ -18,13 +18,12 @@ class ReceptionController extends Controller
      */
     public function index()
     {
-        /*$receptionsv = Reception::get();
-        $clientsv = Client::get();
-        $technicalsv = Technical::get();*/
-        $now = Carbon::now();              
+    
+        $now = Carbon::now();
+        $clients    = Client::all();              
         $receptions =  Reception::orderBy('id', 'DESC')->paginate();       
 
-        return view('receptions.index', compact('receptions','now'));
+        return view('receptions.index', compact('receptions', 'now', 'clients'));
         
     }
 
@@ -37,8 +36,9 @@ class ReceptionController extends Controller
     {
         $receptions = Reception::all();        
         $technicals = Technical::all();
+        $clients    = Client::all();
 
-        return view('receptions.create', compact('receptions','technicals'));
+        return view('receptions.create', compact('receptions', 'technicals', 'clients'));
     }
 
     /**
@@ -51,14 +51,13 @@ class ReceptionController extends Controller
     {
         $reception = new Reception;
 
-        $reception->technical_id = $request->technical_id;       
-        $reception->nombre_cliente = $request->nombre_cliente;
-        $reception->telefono = $request->telefono;
+        $reception->technical_id   = $request->technical_id;       
+        $reception->client_id      = $request->client_id;       
         $reception->fecharecepcion = $request->fecharecepcion;
-        $reception->problema = $request->problema;
-        $reception->equipo = $request->equipo;
-        $reception->observacion = $request->observacion;
-        $reception->estado = $request->estado;
+        $reception->problema       = $request->problema;
+        $reception->equipo         = $request->equipo;
+        $reception->observacion    = $request->observacion;
+        $reception->estado         = $request->estado;
 
         $reception->save();
 
@@ -85,10 +84,11 @@ class ReceptionController extends Controller
      */
     public function edit($id)
     {
-        $reception = Reception::find($id);
+        $reception  = Reception::find($id);
         $technicals = Technical::all();
+        $clients    = Client::all();
 
-        return view('receptions.edit', compact('reception','technicals'));
+        return view('receptions.edit', compact('reception', 'technicals', 'clients'));
     }
 
     /**
@@ -102,18 +102,17 @@ class ReceptionController extends Controller
     {
         $reception = Reception::find($id);
 
-        $reception->technical_id = $request->technical_id;       
-        $reception->nombre_cliente = $request->nombre_cliente;
-        $reception->telefono = $request->telefono;
+        $reception->technical_id   = $request->technical_id;       
+        $reception->client_id      = $request->client_id;        
         $reception->fecharecepcion = $request->fecharecepcion;
-        $reception->problema = $request->problema;
-        $reception->equipo = $request->equipo;
-        $reception->observacion = $request->observacion;
-        $reception->estado = $request->estado;
+        $reception->problema       = $request->problema;
+        $reception->equipo         = $request->equipo;
+        $reception->observacion    = $request->observacion;
+        $reception->estado         = $request->estado;
 
         $reception->save();
 
-        return redirect()->route('recepcion.index')->with('info', 'El archivo fue actualizado correctamente');
+        return redirect()->route('recepcion.index')->with('info', 'El registro fue actualizado correctamente');
     }
 
     /**
@@ -126,6 +125,6 @@ class ReceptionController extends Controller
     {
         $reception = Reception::find($id);
         $reception->delete();
-        return back()->with('info', 'El archivo fue Eliminado correctamente');
+        return back()->with('info', 'El registro fue Eliminado correctamente');
     }
 }

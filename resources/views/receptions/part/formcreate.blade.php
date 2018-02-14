@@ -5,12 +5,19 @@
 	<div class="form-row">
 		<div class="form-group col-sm-6">
 			<label for="nombre_cliente">Cliente</label>
-			<input type="text" id="nombre_cliente" name="nombre_cliente" class="form-control">
+
+			<select name="client_id" id="client_id" class="form-control">	
+				@foreach($clients as $client)
+					<option value="{{ $client->id }}">{{ $client->nombre }}</option>
+				@endforeach
+			</select>
+
+		
 		</div>	
 
 		<div class="form-group col-sm-3">
-			<label for="telefono">Teléfono</label>
-			<input type="text" id="telefono" name="telefono" class="form-control">
+			{{-- <label for="telefono">Teléfono</label>
+			<input type="text" id="telefono" name="telefono" class="form-control"> --}}
 		</div>	
 		
 		<div class="form-group col-sm-3">

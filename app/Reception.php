@@ -15,6 +15,11 @@ class Reception extends Model
     protected $dates = [
         'fecharecepcion'
     ];
+
+    public function client()
+    {
+        return $this->belongsTo('App\Client');
+    }   
    
     public function technical()
     {

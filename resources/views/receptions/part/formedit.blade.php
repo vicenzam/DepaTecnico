@@ -6,12 +6,19 @@
 	<div class="form-row">
 		<div class="form-group col-sm-6">
 			<label for="nombre_cliente">Cliente</label>
-			<input type="text" id="nombre_cliente" name="nombre_cliente" class="form-control" value="{{ $reception->nombre_cliente }}">
+			<select name="client_id" id="client_id" class="custom-select form-control">	
+				<option selected value="{{ $reception->client_id }}">{{ $reception->client->nombre }}</option>					
+				@foreach($clients as $client)
+					@if( $reception->client_id != $client->id )
+						<option value="{{ $client->id }}">{{ $client->nombre }}</option>
+					@endif
+				@endforeach
+			</select>
 		</div>	
 
 		<div class="form-group col-sm-3">
-			<label for="telefono">Teléfono</label>
-			<input type="text" id="telefono" name="telefono" class="form-control" value="{{ $reception->telefono }}">
+			{{-- <label for="telefono">Teléfono</label>
+			<input type="text" id="telefono" name="telefono" class="form-control" value="{{ $reception->telefono }}"> --}}
 		</div>	
 		
 		<div class="form-group col-sm-3">

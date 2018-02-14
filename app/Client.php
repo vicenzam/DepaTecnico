@@ -16,5 +16,5 @@ class Client extends Model
     public function receptions()
     {
         return $this->hasMany('App\Reception');
-    }   
+    }     
 }

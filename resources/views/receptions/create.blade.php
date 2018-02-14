@@ -5,6 +5,7 @@
 @endsection
 
 @section('stylesheet')	
+	
 	<script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=gfjseyr1y23c213xzdsjw2waizh25cnxtz88rgwmvtxmj00o"></script>
 	{{-- <script src="{{ asset('js/jquery.tinymce.min.js') }}"></script> --}}
 	<script>
@@ -44,6 +45,5 @@
 			@include('receptions.part.formcreate')
 
 		</div>
-
 
 @endsection

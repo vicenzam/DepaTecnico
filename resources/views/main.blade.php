@@ -8,6 +8,9 @@
 	<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/toastr.css') }}">
+	{{-- <link rel="stylesheet" href="{{ asset('css/bootstrap-select.min.css') }}"> --}}
+	{{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css"> --}}
+	<link rel="stylesheet" href="{{ asset('css/select.min.css') }}">
 	
 	@yield('stylesheet')
 
@@ -40,7 +43,13 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 	<script src="{{ asset('js/toastr.js') }}"></script>
-	
+	<script src="{{ asset('js/jquery.filtertable.min.js') }}"></script>
+	{{-- <script src="{{ asset('js/bootstrap-select.min.js') }}"></script> --}}
+	{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script> --}}
+	{{-- <script src="{{ asset('js/i18n/defaults-es_ES.min.js') }}"></script> --}}
+	{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script> --}}
+	<script src="{{ asset('js/select.min.js') }}"></script>
+
 	@yield('scripts')
 
 	<script src="{{ asset('js/vue.js') }}"></script>
