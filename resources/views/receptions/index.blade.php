@@ -32,23 +32,25 @@
 			</div>
 			<div class="clearfix"></div>
 			<table id="tableReception" class="table table-hover table-striped">
-			  <thead>
+			  <thead class="tableReception__head">
 			    <tr>
 			      <th scope="col">#</th>
 			      <th scope="col">Cliente</th>			      
 			      <th scope="col">Fecha</th>			      
 			      <th scope="col">Problema</th>			      
+			      <th scope="col">Equipos</th>			      
 			      <th scope="col">Estado</th>			      
 			      <th scope="col" colspan="2">&nbsp;</th>
 			    </tr>
 			  </thead>
-			  <tbody>		  	
-				@foreach($receptions as $reception)    			
+			  <tbody class="tableReception__body">		  	
+				@foreach($receptions as $reception)			
 			    <tr>
 			    	<td>{{ $reception->id }}</td>
-			    	<td>{{ $reception->client->nombre }}</td>			    	
+			    	<td>{{ $reception->client->nombre }} {{ $reception->client->apellido }}</td>			    	
 			    	<td>{{ $reception->fecharecepcion->format('d-m-Y') }}</td>			    	
 			    	<td>{!! $reception->problema !!}</td>			    	
+			    	<td>{!! $reception->equipo !!}</td>			    	
 			    	<td>{{ $reception->estado }}</td>			    	
 			    	<td>
 				      	<a href="{{ route('recepcion.show', $reception->id) }}" class="btn btn-primary iconotabla"

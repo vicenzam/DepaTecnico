@@ -15,6 +15,11 @@
 						<span v-for="error in errors"  class="text-danger">@{{ error.nombre }}</span>
 					</div>
 					<div class="form-group">
+						<label for="apellido">Apellido</label>
+						<input type="text" name="apellido" class="form-control" v-model="fillClient.apellido">
+						<span v-for="error in errors"  class="text-danger">@{{ error.apellido }}</span>
+					</div>
+					<div class="form-group">
 						<label for="cedula">Cedula</label>
 						<input type="text" name="cedula" class="form-control" v-model="fillClient.cedula">
 						<span v-for="error in errors"  class="text-danger">@{{ error.cedula }}</span>

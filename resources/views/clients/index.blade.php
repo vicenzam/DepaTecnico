@@ -30,6 +30,7 @@
 			    <tr>
 			      <th scope="col">#</th>
 			      <th scope="col">Nombre</th>
+			      <th scope="col">Apellido</th>
 			      <th scope="col">Cédula</th>
 			      <th scope="col">Teléfono</th>
 			      <th scope="col">Email</th>
@@ -41,6 +42,7 @@
 			    <tr v-for="client in clients">
 			    	<td>@{{ client.id }}</td>
 			    	<td>@{{ client.nombre }}</td>
+			    	<td>@{{ client.apellido }}</td>
 			    	<td>@{{ client.cedula }}</td>
 			    	<td>@{{ client.telefono }}</td>
 			    	<td>@{{ client.email }}</td>

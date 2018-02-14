@@ -15,6 +15,11 @@
 					</p>
 					<hr>
 					<p>
+						<h4>Nombre:</h4>
+						@{{ fillClient.apellido }}
+					</p>
+					<hr>
+					<p>
 						<h4>Cédula:</h4>
 						@{{ fillClient.cedula }}
 					</p>

@@ -23,10 +23,10 @@ new Vue({
 	data: {
 		clients: [],
 		newClient: {
-			'nombre': '', 'cedula': '', 'telefono': '', 'email': ''
+			'nombre': '', 'apellido': '', 'cedula': '', 'telefono': '', 'email': ''
 		},		
 		fillClient: {
-			'id': '', 'nombre': '', 'cedula': '', 'telefono': '', 'email': ''
+			'id': '', 'nombre': '', 'apellido': '', 'cedula': '', 'telefono': '', 'email': ''
 		},		
 		errors: [],
 		pagination: {
@@ -78,6 +78,7 @@ new Vue({
 		},
 		showClient: function(client){				
 			this.fillClient.nombre = client.nombre;
+			this.fillClient.apellido = client.apellido;
 			this.fillClient.cedula = client.cedula;
 			this.fillClient.telefono = client.telefono;
 			this.fillClient.email = client.email;
@@ -86,6 +87,7 @@ new Vue({
 		editClient: function(client){
 			this.fillClient.id = client.id;
 			this.fillClient.nombre = client.nombre;
+			this.fillClient.apellido = client.apellido;
 			this.fillClient.cedula = client.cedula;
 			this.fillClient.telefono = client.telefono;
 			this.fillClient.email = client.email;
@@ -96,7 +98,7 @@ new Vue({
 			axios.put(url, this.fillClient).then(response => {
 				this.getClients();
 				this.fillClient = {
-					'id': '', 'nombre': '', 'cedula': '', 'telefono': '', 'email': ''
+					'id': '', 'nombre': '', 'apellido': '', 'cedula': '', 'telefono': '', 'email': ''
 				};
 				this.errors = [];
 				$('#edit').modal('hide');
@@ -116,12 +118,14 @@ new Vue({
 			var url = 'clients';
 			axios.post(url, {
 				nombre: this.newClient.nombre,
+				nombre: this.newClient.apellido,
 				cedula: this.newClient.cedula,
 				telefono: this.newClient.telefono,
 				email: this.newClient.email
 			}).then(response => {
 				this.getClients();
 				this.newClient.nombre = '';
+				this.newClient.apellido = '';
 				this.newClient.cedula = '';
 				this.newClient.telefono = '';
 				this.newClient.email = '';
@@ -277,6 +281,6 @@ new Vue({
 
 var mySelect = new Select('#client_id',{
 	filtered: 'auto',
-	filter_placeholder: 'Seleccionar opciones...',
+	filter_placeholder: 'Seleccione el Cliente...',
 	filter_threshold: 8
 });

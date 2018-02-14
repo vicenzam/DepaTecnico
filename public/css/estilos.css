@@ -83,6 +83,12 @@ td p {
 #imprimir {
   cursor: pointer; }
 
+.tableReception__head tr th {
+  font-size: 14px; }
+
+.tableReception__body tr td {
+  font-size: 14px; }
+
 .header {
   height: 60px;
   background: #727272; }
@@ -281,3 +287,8 @@ footer {
     .documento__footer__right {
       width: 50%;
       text-align: center; }
+
+.select {
+  max-width: 100%; }
+  .select .value {
+    font-size: 16px; }
