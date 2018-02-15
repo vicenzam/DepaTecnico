@@ -6,11 +6,11 @@
 	<div class="form-row">
 		<div class="form-group col-sm-6">
 			<label for="nombre_cliente">Cliente</label>
-			<select name="client_id" id="client_id" class="custom-select form-control">	
-				<option selected value="{{ $reception->client_id }}">{{ $reception->client->nombre }}</option>					
+			<select name="client_id" id="client_id" class="form-control">	
+				<option selected value="{{ $reception->client_id }}">{{ $reception->client->nombre }} {{ $reception->client->apellido }} >> TEL: {{ $reception->client->telefono }} #{{ $reception->client_id }}</option>					
 				@foreach($clients as $client)
 					@if( $reception->client_id != $client->id )
-						<option value="{{ $client->id }}">{{ $client->nombre }}</option>
+						<option value="{{ $client->id }}">{{ $client->nombre }} {{ $client->apellido }} >> TEL: {{ $client->telefono }} #{{ $client->id }}</option>
 					@endif
 				@endforeach
 			</select>
@@ -42,6 +42,11 @@
 			<label for="observacion">Observación</label>
 			<textarea name="observacion" id="observacion" cols="30" rows="8" class="form-control">{!! $reception->observacion !!}</textarea>
 		</div>
+
+		<div class="form-group col-sm-6">
+			<label for="solucion">Solución</label>
+			<textarea name="solucion" id="solucion" cols="30" rows="8" class="form-control">{!! $reception->solucion !!}</textarea>
+		</div>
 	
 		<div class="col-sm-6">
 			<div class="form-row">
@@ -66,12 +71,12 @@
 							<option value="ENTREGADO">ENTREGADO</option>
 						@elseif($reception->estado == 'REVISION')
 							<option selected value="{{ $reception->estado }}">{{ $reception->estado }}</option>
-							<option value="REVISION">INGRESADO</option>
+							<option value="INGRESADO">INGRESADO</option>
 							<option value="ENTREGADO">ENTREGADO</option>
 						@else
 							<option selected value="{{ $reception->estado }}">{{ $reception->estado }}</option>
-							<option value="REVISION">INGRESADO</option>
-							<option value="ENTREGADO">REVISION</option>
+							<option value="INGRESADO">INGRESADO</option>
+							<option value="REVISION">REVISION</option>
 						@endif		
 						
 					</select>

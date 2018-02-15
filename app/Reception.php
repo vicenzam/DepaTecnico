@@ -9,7 +9,7 @@ class Reception extends Model
     protected $table = "receptions";
     
     protected $fillable = [
-      'technical_id', 'nombre_cliente', 'telefono', 'fecharecepcion', 'problema', 'equipo', 'observacion', 'estado'
+      'technical_id', 'nombre_cliente', 'telefono', 'fecharecepcion', 'problema', 'equipo', 'observacion', 'estado', 'solucion'
     ];
 
     protected $dates = [

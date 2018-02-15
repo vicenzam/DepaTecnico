@@ -80,6 +80,10 @@
 				</ul>
 			</nav>
 			
+			<div>
+				{{-- <pre>@{{ $data }}</pre> --}}
+			</div>
+			
 			<div class="col-12">
 				@include('clients.create')
 				@include('clients.edit')

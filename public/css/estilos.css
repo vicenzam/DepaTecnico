@@ -83,6 +83,9 @@ td p {
 #imprimir {
   cursor: pointer; }
 
+.btn {
+  cursor: pointer; }
+
 .tableReception__head tr th {
   font-size: 14px; }
 

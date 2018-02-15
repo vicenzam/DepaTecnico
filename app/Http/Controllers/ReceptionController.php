@@ -58,6 +58,7 @@ class ReceptionController extends Controller
         $reception->equipo         = $request->equipo;
         $reception->observacion    = $request->observacion;
         $reception->estado         = $request->estado;
+        $reception->solucion       = $request->solucion;
 
         $reception->save();
 
@@ -109,6 +110,7 @@ class ReceptionController extends Controller
         $reception->equipo         = $request->equipo;
         $reception->observacion    = $request->observacion;
         $reception->estado         = $request->estado;
+        $reception->solucion       = $request->solucion;
 
         $reception->save();
 

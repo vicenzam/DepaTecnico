@@ -8,7 +8,7 @@
 
 			<select name="client_id" id="client_id" class="form-control">	
 				@foreach($clients as $client)
-					<option value="{{ $client->id }}">{{ $client->nombre }} {{ $client->apellido }}</option>
+					<option value="{{ $client->id }}">{{ $client->nombre }} {{ $client->apellido }} >> TEL: {{ $client->telefono }} #{{ $client->id }}</option>
 				@endforeach
 			</select>
 
