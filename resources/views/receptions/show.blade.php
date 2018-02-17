@@ -64,7 +64,7 @@
 		
 					<div class="documento__datos">
 						<div class="documento__datos__left">
-							<p><strong>Nombre: </strong> {{ $reception->client->nombre }}<br>
+							<p><strong>Nombre: </strong> {{ $reception->client->nombre }} {{ $reception->client->apellido }}<br>
 							<strong>Teléfono: </strong> {{ $reception->client->telefono }}</p>
 						</div>
 						<div class="documento__datos__right">

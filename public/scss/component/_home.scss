@@ -2,7 +2,13 @@
 	tr{
 		th{
 			font-size: 14px;
+
+			&:nth-child(3){
+				width: 100px;
+			}
 		}
+
+		
 	}
 }
 

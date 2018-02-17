@@ -88,6 +88,8 @@ td p {
 
 .tableReception__head tr th {
   font-size: 14px; }
+  .tableReception__head tr th:nth-child(3) {
+    width: 100px; }
 
 .tableReception__body tr td {
   font-size: 14px; }
